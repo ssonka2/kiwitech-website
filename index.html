@@ -42,8 +42,16 @@ img{display:block;max-width:100%;}
   width:100%;max-width:none;margin:0 auto;padding:0 84px;
   height:80px;display:flex;align-items:center;justify-content:space-between;gap:28px;
 }
-.logo{display:flex;align-items:center;flex-shrink:0;}
-.logo-img{width:268px;height:auto;display:block;}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.logo-badge{
+  width:42px;height:42px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(135deg,#4f8ef7,#2563eb);display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:900;color:#fff;
+  box-shadow:0 4px 14px rgba(37,99,235,0.3);
+}
+.logo-name{font-size:16px;font-weight:900;color:#1e3a8a;letter-spacing:2px;line-height:1;text-transform:uppercase;}
+.logo-tagline{font-size:10px;font-weight:800;letter-spacing:1.5px;
+  background:linear-gradient(90deg,#f97316,#ec4899,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:3px;}
 .nav-links{display:flex;align-items:center;gap:16px;list-style:none;margin-left:auto;}
 .nav-links a{
   color:var(--sub);font-size:13.5px;font-weight:500;
@@ -532,7 +540,6 @@ img{display:block;max-width:100%;}
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
   .nav-i{height:68px;padding:0 22px;}
-  .logo-img{width:210px;}
   .nav-links{display:none;}
   .ham{display:flex;}
   .hero{min-height:auto;}
@@ -552,7 +559,9 @@ img{display:block;max-width:100%;}
   .svc-modal-body{padding:30px;}
 }
 @media(max-width:600px){
-  .logo-img{width:178px;}
+  .logo-badge{width:38px;height:38px;border-radius:11px;font-size:14px;}
+  .logo-name{font-size:13px;letter-spacing:1.4px;}
+  .logo-tagline{font-size:8px;letter-spacing:1.1px;}
   .hero-content-panel{padding:40px 20px 48px;}
   .hero h1{font-size:clamp(34px,10vw,44px);}
   .hero-desc{font-size:15px;}
@@ -586,7 +595,11 @@ img{display:block;max-width:100%;}
 <nav class="nav">
   <div class="nav-i">
     <a href="#" class="logo">
-      <img class="logo-img" src="main-logo.png" alt="KiwiTech IT Solutions - Automate, Innovate, Elevate">
+      <div class="logo-badge">KT</div>
+      <div>
+        <div class="logo-name">KiwiTech IT Solutions</div>
+        <div class="logo-tagline">Automate · Innovate · Elevate</div>
+      </div>
     </a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
