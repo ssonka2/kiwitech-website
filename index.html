@@ -585,7 +585,15 @@ img{display:block;max-width:100%;}
   .svc-modal-body{padding:24px;}
   .svc-modal-img{min-height:210px;}
   .svc-modal-actions .btn-p,.svc-modal-actions .btn-s{width:100%;justify-content:center;}
-  .flow-row{gap:8px;}
+  .flow-outer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 18px;margin-top:42px;}
+  .flow-row{display:contents;}
+  .flow-row .fn{width:auto;max-width:170px;justify-self:center;}
+  .flow-row:first-child .fn:nth-child(1){order:1;}
+  .flow-row:first-child .fn:nth-child(3){order:2;}
+  .flow-row:first-child .fn:nth-child(5){order:3;}
+  .flow-row.rev .fn:nth-child(5){order:4;}
+  .flow-row.rev .fn:nth-child(3){order:5;}
+  .flow-row.rev .fn:nth-child(1){order:6;}
 }
 </style>
 </head>
