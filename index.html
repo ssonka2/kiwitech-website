@@ -537,6 +537,101 @@ img{display:block;max-width:100%;}
 .m-val{font-size:18px;font-weight:800;color:var(--ink);display:block;}
 .m-hint{font-size:11px;color:var(--sub);text-align:center;margin-top:14px;display:block;}
 
+/* ─── KICK START OFFER ─── */
+.offer-overlay{
+  position:fixed;inset:0;z-index:1000;
+  display:flex;align-items:center;justify-content:center;
+  padding:28px;background:rgba(6,13,32,0.72);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.offer-overlay.is-hidden{display:none;}
+.offer-banner{
+  position:relative;width:min(1180px,100%);min-height:min(720px,calc(100vh - 56px));
+  display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;
+  overflow:hidden;border-radius:22px;
+  background:
+    radial-gradient(circle at 10% 12%,rgba(255,255,255,0.3),transparent 25%),
+    linear-gradient(135deg,#ff3d77 0%,#7c3aed 42%,#0891b2 100%);
+  box-shadow:0 30px 90px rgba(2,6,23,0.42);
+  color:#fff;padding:42px;
+}
+.offer-banner::before{
+  content:'';position:absolute;inset:16px;border:1px solid rgba(255,255,255,0.26);
+  border-radius:18px;pointer-events:none;
+}
+.offer-close{
+  position:absolute;top:22px;right:22px;z-index:2;
+  width:42px;height:42px;border:0;border-radius:50%;
+  background:rgba(255,255,255,0.16);color:#fff;font-size:20px;font-weight:800;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-family:'Inter',sans-serif;transition:background 0.2s,transform 0.2s;
+}
+.offer-close:hover{background:rgba(255,255,255,0.28);transform:scale(1.04);}
+.offer-main{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;min-width:0;}
+.offer-kicker{
+  width:max-content;max-width:100%;display:inline-flex;align-items:center;gap:8px;
+  padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.28);font-size:12px;font-weight:900;
+  letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;
+}
+.offer-title{
+  font-size:clamp(42px,7vw,86px);line-height:0.92;font-weight:900;
+  letter-spacing:0;margin-bottom:18px;max-width:760px;
+}
+.offer-title span{display:block;color:#fff200;text-shadow:0 8px 26px rgba(0,0,0,0.16);}
+.offer-sub{
+  font-size:clamp(18px,2.3vw,30px);line-height:1.2;font-weight:800;max-width:720px;margin-bottom:22px;
+}
+.offer-question{
+  max-width:680px;margin:-8px 0 20px;padding:12px 16px;border-radius:14px;
+  background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.24);
+  font-size:15px;line-height:1.45;font-weight:700;color:rgba(255,255,255,0.95);
+}
+.offer-question strong{color:#fff200;font-weight:900;}
+.offer-chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;}
+.offer-chip{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
+  background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.26);
+  font-size:13px;font-weight:800;
+}
+.offer-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.offer-primary,.offer-secondary{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:999px;padding:14px 22px;font-size:14px;font-weight:900;
+  transition:transform 0.18s,box-shadow 0.18s,background 0.18s;
+}
+.offer-primary{background:#fff;color:#111827;box-shadow:0 12px 34px rgba(0,0,0,0.2);}
+.offer-secondary{background:rgba(255,255,255,0.14);color:#fff;border:1px solid rgba(255,255,255,0.28);}
+.offer-primary:hover,.offer-secondary:hover{transform:translateY(-2px);}
+.offer-panel{
+  position:relative;z-index:1;align-self:center;
+  background:rgba(255,255,255,0.96);color:#111827;border-radius:18px;
+  padding:26px;box-shadow:0 18px 50px rgba(15,23,42,0.22);
+}
+.offer-price-label{font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;color:#7c3aed;margin-bottom:8px;}
+.offer-price{font-size:80px;line-height:0.9;font-weight:900;color:#111827;margin-bottom:10px;letter-spacing:0;}
+.offer-price small{font-size:24px;vertical-align:top;margin-right:2px;}
+.offer-panel h3{font-size:20px;line-height:1.2;margin-bottom:12px;color:#111827;}
+.offer-list{list-style:none;display:grid;gap:10px;margin:16px 0;}
+.offer-list li{font-size:13px;line-height:1.45;color:#334155;display:flex;gap:9px;}
+.offer-list li::before{content:'✓';width:20px;height:20px;border-radius:50%;background:#dcfce7;color:#15803d;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;flex-shrink:0;}
+.offer-terms{
+  margin-top:16px;padding:13px;border-radius:12px;background:#fff7ed;border:1px solid #fed7aa;
+  color:#7c2d12;font-size:9.5px;line-height:1.45;font-weight:600;
+}
+.offer-float{
+  position:fixed;right:0;top:50%;transform:translateY(-50%) translateX(110%);
+  z-index:999;border:0;border-radius:16px 0 0 16px;
+  padding:14px 12px 14px 14px;cursor:pointer;color:#fff;
+  background:linear-gradient(135deg,#ff3d77,#7c3aed,#0891b2);
+  box-shadow:0 16px 38px rgba(15,23,42,0.28);
+  font-family:'Inter',sans-serif;transition:transform 0.25s;
+}
+.offer-float.is-visible{transform:translateY(-50%) translateX(0);}
+.offer-float span{display:block;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase;}
+.offer-float strong{display:block;font-size:22px;line-height:1;margin-top:4px;}
+.offer-float em{display:block;font-style:normal;font-size:9.5px;font-weight:800;margin-top:4px;opacity:0.92;}
+
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
   .nav-i{height:68px;padding:0 22px;}
@@ -557,6 +652,12 @@ img{display:block;max-width:100%;}
   .svc-modal-grid{grid-template-columns:1fr;}
   .svc-modal-img{min-height:260px;}
   .svc-modal-body{padding:30px;}
+  .offer-overlay{padding:16px;align-items:flex-start;overflow:auto;}
+  .offer-banner{grid-template-columns:1fr;min-height:auto;padding:34px 22px 22px;border-radius:18px;gap:22px;}
+  .offer-banner::before{inset:10px;border-radius:14px;}
+  .offer-close{top:14px;right:14px;width:38px;height:38px;}
+  .offer-panel{align-self:stretch;padding:20px;}
+  .offer-price{font-size:64px;}
 }
 @media(max-width:600px){
   .logo-badge{width:38px;height:38px;border-radius:11px;font-size:14px;}
@@ -594,10 +695,55 @@ img{display:block;max-width:100%;}
   .flow-row.rev .fn:nth-child(5){order:4;}
   .flow-row.rev .fn:nth-child(3){order:5;}
   .flow-row.rev .fn:nth-child(1){order:6;}
+  .offer-title{font-size:44px;}
+  .offer-sub{font-size:18px;}
+  .offer-question{font-size:13px;margin-top:-4px;}
+  .offer-actions{align-items:stretch;flex-direction:column;}
+  .offer-primary,.offer-secondary{width:100%;}
+  .offer-float{padding:12px 10px 12px 12px;}
+  .offer-float strong{font-size:18px;}
 }
 </style>
 </head>
 <body>
+
+<!-- KICK START OFFER -->
+<div class="offer-overlay" id="kw-offer" role="dialog" aria-modal="true" aria-labelledby="kw-offer-title">
+  <div class="offer-banner">
+    <button class="offer-close" onclick="kwOfferClose()" aria-label="Close website offer">×</button>
+    <div class="offer-main">
+      <div class="offer-kicker">Limited Kick Start Offer</div>
+      <h2 class="offer-title" id="kw-offer-title">Own a website <span>for $50</span></h2>
+      <p class="offer-sub">Get a new website at $50. Flat-price modern website for new clients, with free hosting included when you already have a domain.</p>
+      <p class="offer-question">Do you have a website yet? <strong>Forgot to get one?</strong> This is your quick way to get online without a big upfront cost.</p>
+      <div class="offer-chips">
+        <span class="offer-chip">$50 website launch</span>
+        <span class="offer-chip">Free hosting</span>
+        <span class="offer-chip">New clients only</span>
+      </div>
+      <div class="offer-actions">
+        <a class="offer-primary" href="#contact" onclick="kwOfferClose()">Claim This Offer</a>
+        <a class="offer-secondary" href="tel:+64223250984">Call +64 22 325 0984</a>
+      </div>
+    </div>
+    <div class="offer-panel">
+      <div class="offer-price-label">Kick Start Price</div>
+      <div class="offer-price"><small>$</small>50</div>
+      <h3>Simple modern website like ours, built to get your business online fast.</h3>
+      <ul class="offer-list">
+        <li>Clean, mobile-friendly website for your business.</li>
+        <li>Free hosting included when you already have a domain.</li>
+        <li>One change per month for 2 months: update or remove content.</li>
+      </ul>
+      <div class="offer-terms">**** Terms and conditions apply: simple modern website only. Login, database, ecommerce, buying or purchase systems are not included. Hosting is included only if you have your own domain. ****</div>
+    </div>
+  </div>
+</div>
+<button class="offer-float" id="kw-offer-float" onclick="kwOfferOpen()" aria-label="Open $50 website offer">
+  <span>Need a website?</span>
+  <strong>$50</strong>
+  <em>Open offer</em>
+</button>
 
 <!-- NAV -->
 <nav class="nav">
@@ -1064,6 +1210,16 @@ img{display:block;max-width:100%;}
 </div>
 
 <script>
+function kwOfferClose(){
+  var offer=document.getElementById('kw-offer'),tab=document.getElementById('kw-offer-float');
+  if(offer)offer.classList.add('is-hidden');
+  if(tab)tab.classList.add('is-visible');
+}
+function kwOfferOpen(){
+  var offer=document.getElementById('kw-offer'),tab=document.getElementById('kw-offer-float');
+  if(offer)offer.classList.remove('is-hidden');
+  if(tab)tab.classList.remove('is-visible');
+}
 function kwHam(){var m=document.getElementById('kw-mob');if(m)m.classList.toggle('open');}
 function kwModal(o){var m=document.getElementById('kw-modal');if(!m)return;if(o){m.classList.add('open');document.body.style.overflow='hidden';}else{m.classList.remove('open');document.body.style.overflow='';}}
 function kwScroll(d){var s=document.getElementById('kw-svc');if(s)s.scrollBy({left:d*300,behavior:'smooth'});}
@@ -1144,7 +1300,8 @@ document.querySelectorAll('.svc-card').forEach(function(card){
 // Modal close
 document.getElementById('kw-modal').addEventListener('click',function(e){if(e.target===this)kwModal(false);});
 document.getElementById('kw-service-modal').addEventListener('click',function(e){if(e.target===this)kwServiceClose();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){kwModal(false);kwServiceClose();}});
+document.getElementById('kw-offer').addEventListener('click',function(e){if(e.target===this)kwOfferClose();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){kwModal(false);kwServiceClose();kwOfferClose();}});
 // Mobile menu close
 document.addEventListener('click',function(e){
   var mob=document.getElementById('kw-mob'),ham=document.getElementById('kw-ham');
