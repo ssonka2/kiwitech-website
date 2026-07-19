@@ -462,6 +462,9 @@ img{display:block;max-width:100%;}
 .legal-card ul{padding-left:19px;margin-top:10px;}
 .legal-note{margin-top:20px;font-size:12px;color:var(--sub);line-height:1.65;}
 .legal-contact{display:inline-flex;margin-top:15px;color:var(--blue);font-size:13px;font-weight:700;}
+.terms-modal{display:none;position:fixed;inset:0;z-index:9999;padding:28px;background:rgba(15,23,42,.72);backdrop-filter:blur(8px);overflow:auto;}
+.terms-modal.open{display:block;}.terms-modal .wrap{max-width:1120px;margin:0 auto;background:#f8fafc;border-radius:18px;padding:48px 34px 38px;box-shadow:0 28px 80px rgba(2,6,23,.36);position:relative;}
+.terms-modal-close{position:absolute;right:20px;top:18px;width:36px;height:36px;border:0;border-radius:10px;background:#e2e8f0;color:#1e293b;font:700 18px 'Inter',sans-serif;cursor:pointer;}.terms-modal-close:hover{background:#cbd5e1;}
 .addons-sec{padding:88px 0;background:#fff;}
 .addons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px;}
 .addon-card{border:1px solid var(--border);border-radius:15px;padding:25px;background:var(--bg-soft);transition:transform .2s,box-shadow .2s;}
@@ -661,6 +664,7 @@ img{display:block;max-width:100%;}
   .about-grid{grid-template-columns:1fr;}
   .legal-grid,.addons-grid{grid-template-columns:1fr;}
   .legal-card.wide{grid-column:auto;}
+  .terms-modal{padding:16px;}.terms-modal .wrap{padding:54px 22px 28px;border-radius:14px;}
   .site-footer-inner{grid-template-columns:1fr 1fr;gap:28px;}
   .footer-brand{grid-column:1/-1;}
   .cookie-banner{padding:16px 20px;}.cookie-inner{align-items:flex-start;flex-direction:column;gap:14px;}.cookie-actions{width:100%;}.cookie-btn{flex:1;text-align:center;}
@@ -1148,11 +1152,12 @@ img{display:block;max-width:100%;}
 </section>
 
 <!-- TERMS, PRIVACY & COOKIE POLICY -->
-<section class="legal-sec" id="terms">
+<section class="legal-sec terms-modal" id="terms" role="dialog" aria-modal="true" aria-labelledby="terms-title" aria-hidden="true">
   <div class="wrap">
+    <button class="terms-modal-close" type="button" onclick="kwTermsClose()" aria-label="Close Terms and Conditions">×</button>
     <div class="legal-intro">
       <span class="section-label">Terms &amp; Conditions</span>
-      <h2 class="section-h">Clear terms for a dependable service.</h2>
+      <h2 class="section-h" id="terms-title">Clear terms for a dependable service.</h2>
       <p class="section-sub">Last updated: 20 July 2026. These terms apply to the business engaging KiwiTech IT Solutions for its AI receptionist and related services.</p>
     </div>
     <div class="legal-grid">
@@ -1322,6 +1327,8 @@ function kwOfferOpen(){
   if(tab)tab.classList.remove('is-visible');
 }
 function kwHam(){var m=document.getElementById('kw-mob');if(m)m.classList.toggle('open');}
+function kwTermsOpen(){var t=document.getElementById('terms');if(!t)return;t.classList.add('open');t.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+function kwTermsClose(){var t=document.getElementById('terms');if(!t)return;t.classList.remove('open');t.setAttribute('aria-hidden','true');document.body.style.overflow='';if(location.hash==='#terms')history.replaceState(null,'',location.pathname+location.search);}
 function kwCookieChoice(choice){
   try{localStorage.setItem('kw-cookie-choice',choice);}catch(e){}
   var banner=document.getElementById('kw-cookie-banner');if(banner)banner.classList.remove('show');
@@ -1410,13 +1417,16 @@ document.querySelectorAll('.svc-card').forEach(function(card){
 document.getElementById('kw-modal').addEventListener('click',function(e){if(e.target===this)kwModal(false);});
 document.getElementById('kw-service-modal').addEventListener('click',function(e){if(e.target===this)kwServiceClose();});
 document.getElementById('kw-offer').addEventListener('click',function(e){if(e.target===this)kwOfferClose();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){kwModal(false);kwServiceClose();kwOfferClose();}});
+document.getElementById('terms').addEventListener('click',function(e){if(e.target===this)kwTermsClose();});
+document.querySelectorAll('a[href="#terms"]').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();kwTermsOpen();});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){kwModal(false);kwServiceClose();kwOfferClose();kwTermsClose();}});
 // Mobile menu close
 document.addEventListener('click',function(e){
   var mob=document.getElementById('kw-mob'),ham=document.getElementById('kw-ham');
   if(mob&&mob.classList.contains('open')&&!mob.contains(e.target)&&ham&&!ham.contains(e.target))mob.classList.remove('open');
 });
 kwCookieInit();
+if(location.hash==='#terms')kwTermsOpen();
 </script>
 </body>
 </html>
