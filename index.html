@@ -115,7 +115,7 @@ img{display:block;max-width:100%;}
 .hero-inner{
   position:relative;z-index:1;
   width:100%;max-width:1120px;margin:0 auto;
-  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,0.85fr);
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);
   align-items:center;gap:56px;
 }
 .hero-text-panel{padding:0;background:none;border:none;box-shadow:none;}
@@ -220,6 +220,18 @@ img{display:block;max-width:100%;}
 .section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:10px;display:block;}
 .section-h{font-size:clamp(26px,3.5vw,42px);font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-0.5px;margin-bottom:12px;}
 .section-sub{font-size:15px;color:var(--sub);line-height:1.7;max-width:560px;}
+
+/* ─── SERVICE ORBIT ─── */
+.orbit-sec{padding:90px 0;background:linear-gradient(180deg,#fff 0%,#f6f9ff 100%);overflow:hidden;}
+.orbit-intro{text-align:center;margin:0 auto 24px;}.orbit-intro .section-sub{margin:0 auto;}.orbit-stage{width:min(100%,620px);height:510px;margin:16px auto 0;position:relative;}
+.orbit-glow{position:absolute;inset:50% auto auto 50%;width:330px;height:330px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(6,182,212,.16),rgba(37,99,235,.05) 52%,transparent 70%);}.orbit-ring{position:absolute;inset:50% auto auto 50%;width:382px;height:382px;border:1.5px dashed rgba(37,99,235,.27);border-radius:50%;transform:translate(-50%,-50%);}.orbit-ring::before{content:'';position:absolute;inset:30px;border:1px solid rgba(6,182,212,.18);border-radius:50%;}
+.orbit-core{position:absolute;z-index:2;top:50%;left:50%;width:188px;height:188px;transform:translate(-50%,-50%);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;background:linear-gradient(145deg,#2563eb,#06b6d4);box-shadow:0 0 0 12px rgba(37,99,235,.09),0 20px 42px rgba(37,99,235,.3);}.orbit-core-icon{font-size:36px;line-height:1;margin-bottom:8px;}.orbit-core strong{font-size:17px;line-height:1.15;}.orbit-core span{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:.85;margin-top:5px;}
+.orbit-inner-ring{position:absolute;z-index:3;inset:50% auto auto 50%;width:270px;height:270px;border:1px solid rgba(236,72,153,.28);border-radius:50%;transform:translate(-50%,-50%);}.orbit-inner-track{position:absolute;inset:0;animation:orbit-spin 14s linear infinite reverse;}.orbit-inner-point{position:absolute;top:50%;left:50%;transform:rotate(var(--angle)) translateX(136px);}.orbit-stat{width:80px;padding:7px 5px;border-radius:10px;background:rgba(255,255,255,.96);border:1px solid rgba(236,72,153,.2);box-shadow:0 7px 16px rgba(15,23,42,.11);text-align:center;transform:translate(-50%,-50%) rotate(calc(-1 * var(--angle)));animation:orbit-counter-reverse 14s linear infinite;}.orbit-stat strong{display:block;color:#ec4899;font-size:15px;line-height:1;margin-bottom:3px;}.orbit-stat span{display:block;color:#1e3a8a;font-size:8px;font-weight:800;line-height:1.15;}
+.orbit-track{position:absolute;inset:0;animation:orbit-spin 24s linear infinite;}.orbit-point{position:absolute;top:50%;left:50%;transform:rotate(var(--angle)) translateX(230px);}.orbit-pill{width:max-content;max-width:160px;padding:10px 13px;border:1px solid #dbeafe;border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 10px 24px rgba(15,23,42,.12);font-size:12px;font-weight:800;color:#1e3a8a;white-space:nowrap;transform:translate(-50%,-50%) rotate(calc(-1 * var(--angle)));animation:orbit-counter 24s linear infinite;}.orbit-pill .orbit-emoji{font-size:15px;margin-right:5px;vertical-align:-1px;}
+.orbit-live-card{width:min(100%,760px);margin:0 auto;padding:22px;background:rgba(239,247,255,.92);border:1px solid rgba(167,139,250,.3);border-radius:18px;box-shadow:0 18px 42px rgba(37,99,235,.12);animation:orbit-card-float 5s ease-in-out infinite;}.orbit-live-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;}.orbit-live-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:#cff4ff;border:1px solid #7dd3fc;font-size:21px;}.orbit-live-title{font-size:17px;font-weight:800;color:#12357d;}.orbit-live-sub{font-size:12px;color:#58709e;margin-top:3px;}.orbit-live-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:14px;align-items:stretch;}.orbit-live-copy{font-size:13px;line-height:1.58;color:#111a61;background:rgba(222,219,248,.7);border-left:4px solid #6d28d9;border-radius:0 10px 10px 0;padding:14px;}.orbit-live-call{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:14px;border:1.5px solid rgba(167,139,250,.45);border-radius:11px;background:rgba(226,225,247,.76);transition:transform .18s,box-shadow .18s;}.orbit-live-call:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,99,235,.14);}.orbit-live-call strong{display:block;font-size:17px;color:#12357d;}.orbit-live-call small{display:block;margin-bottom:3px;color:#6d28d9;font-size:10px;font-weight:900;letter-spacing:1px;text-transform:uppercase;}.orbit-live-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px;}.orbit-live-stat{padding:10px 7px;border:1.5px solid rgba(167,139,250,.42);border-radius:10px;background:rgba(226,225,247,.7);text-align:center;}.orbit-live-stat strong{display:block;font-size:17px;line-height:1;color:#ff2f92;margin-bottom:5px;}.orbit-live-stat span{display:block;font-size:10px;font-weight:800;color:#111a61;}@keyframes orbit-card-float{50%{transform:translateY(-5px);}}
+.hero-orbit{width:100%;justify-self:end;}.hero-orbit .orbit-stage{width:540px;max-width:100%;height:420px;margin:0 auto;}.hero-orbit .orbit-ring{width:342px;height:342px;}.hero-orbit .orbit-glow{width:295px;height:295px;}.hero-orbit .orbit-core{width:162px;height:162px;}.hero-orbit .orbit-inner-ring{width:250px;height:250px;}.hero-orbit .orbit-inner-point{transform:rotate(var(--angle)) translateX(125px);}.hero-orbit .orbit-stat{width:72px;}.hero-orbit .orbit-point{transform:rotate(var(--angle)) translateX(190px);}.hero-orbit .orbit-pill{font-size:11px;padding:8px 10px;}.hero-orbit-demo{width:min(100%,390px);margin:-8px auto 0;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:12px 15px;border:1.5px solid rgba(167,139,250,.45);border-radius:12px;background:rgba(239,247,255,.9);box-shadow:0 10px 24px rgba(37,99,235,.12);color:#12357d;transition:transform .18s,box-shadow .18s;}.hero-orbit-demo:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(37,99,235,.18);}.hero-orbit-demo strong{display:block;font-size:16px;}.hero-orbit-demo small{display:block;margin-bottom:2px;color:#6d28d9;font-size:10px;font-weight:900;letter-spacing:1px;text-transform:uppercase;}
+@keyframes orbit-spin{to{transform:rotate(360deg);}}@keyframes orbit-counter{to{transform:translate(-50%,-50%) rotate(calc(-1 * var(--angle) - 360deg));}}@keyframes orbit-counter-reverse{to{transform:translate(-50%,-50%) rotate(calc(-1 * var(--angle) + 360deg));}}
+@media (prefers-reduced-motion:reduce){.orbit-track,.orbit-pill,.orbit-inner-track,.orbit-stat{animation:none;}}
 
 /* ─── PROBLEM ─── */
 .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
@@ -659,6 +671,8 @@ img{display:block;max-width:100%;}
   .hero-inner{max-width:680px;grid-template-columns:1fr;gap:34px;}
   .demo-card{justify-self:start;max-width:520px;}
   .prob-grid{grid-template-columns:1fr;}
+  .orbit-sec{padding:70px 0;}.orbit-stage{height:450px;transform:scale(.88);margin:-10px auto -28px;}
+  .orbit-live-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;}
   .cc-callout{grid-column:auto;}
   .about-grid{grid-template-columns:1fr;}
@@ -690,6 +704,8 @@ img{display:block;max-width:100%;}
   .logo-tagline{font-size:8px;letter-spacing:1.1px;}
   .hero-content-panel{padding:40px 20px 48px;}
   .hero h1{font-size:clamp(34px,10vw,44px);}
+  .orbit-stage{height:350px;transform:scale(.57);margin:-70px auto -90px;}
+  .orbit-live-card{padding:16px;}.orbit-live-stats{gap:6px;}.orbit-live-stat strong{font-size:15px;}
   .hero-desc{font-size:15px;}
   .hero-trust{grid-template-columns:1fr;}
   .demo-card{max-width:none;padding:22px;border-radius:16px;}
@@ -844,40 +860,25 @@ img{display:block;max-width:100%;}
         <div class="trust-item"><div class="trust-check">✓</div>No Extra Hire Needed</div>
       </div>
     </div>
-
-    <div class="demo-card">
-      <div class="dc-top">
-        <div class="dc-icon">🤖</div>
-        <div>
-          <div class="dc-title">Try Our <span>AI</span> Receptionist</div>
-          <div class="dc-subtitle">Live demo · call now and hear it in action</div>
+    <div class="hero-orbit" aria-label="AI Receptionist with connected KiwiTech services">
+      <div class="orbit-stage">
+        <div class="orbit-glow"></div><div class="orbit-ring"></div>
+        <div class="orbit-core"><span class="orbit-core-icon">🤖</span><strong>AI<br>Receptionist</strong><span>Always on</span></div>
+        <div class="orbit-inner-ring" aria-hidden="true"><div class="orbit-inner-track">
+          <div class="orbit-inner-point" style="--angle:30deg"><div class="orbit-stat"><strong>24/7</strong><span>Always On</span></div></div>
+          <div class="orbit-inner-point" style="--angle:150deg"><div class="orbit-stat"><strong>&lt;1s</strong><span>Response</span></div></div>
+          <div class="orbit-inner-point" style="--angle:270deg"><div class="orbit-stat"><strong>100%</strong><span>Answered</span></div></div>
+        </div></div>
+        <div class="orbit-track" aria-hidden="true">
+          <div class="orbit-point" style="--angle:0deg"><div class="orbit-pill"><span class="orbit-emoji">📅</span>Appointment Booking</div></div>
+          <div class="orbit-point" style="--angle:60deg"><div class="orbit-pill"><span class="orbit-emoji">🎯</span>Lead Generation</div></div>
+          <div class="orbit-point" style="--angle:120deg"><div class="orbit-pill"><span class="orbit-emoji">⚙️</span>Workflow Automation</div></div>
+          <div class="orbit-point" style="--angle:180deg"><div class="orbit-pill"><span class="orbit-emoji">🗣️</span>AI Voice Agents</div></div>
+          <div class="orbit-point" style="--angle:240deg"><div class="orbit-pill"><span class="orbit-emoji">🌐</span>Website Development</div></div>
+          <div class="orbit-point" style="--angle:300deg"><div class="orbit-pill"><span class="orbit-emoji">📈</span>Customer Follow-up</div></div>
         </div>
       </div>
-      <p class="dc-desc">Call now to experience our AI Receptionist firsthand: greeting callers, answering questions, and booking appointments, indistinguishable from a human, 24/7.</p>
-      <a href="tel:+6478085066" class="dc-num">
-        <div class="dc-flag">🇳🇿</div>
-        <div>
-          <span class="dc-badge nz">AI Demo Line</span>
-          <div class="dc-number">+64 7 808 5066</div>
-        </div>
-        <span class="dc-call">📞</span>
-      </a>
-      <!-- US line commented out , was live, may reactivate later
-
-      <a href="tel:+18653528345" class="dc-num" style="margin-bottom:14px;">
-        <div class="dc-flag">🇺🇸</div>
-        <div>
-          <span class="dc-badge us">US AI Demo Line</span>
-          <div class="dc-number">+1 (865) 352-8345</div>
-        </div>
-        <span class="dc-call">📞</span>
-      </a>
-    -->
-      <div class="dc-stats">
-        <div class="dc-stat"><span class="dc-sv">24/7</span><span class="dc-sl">Always On</span></div>
-        <div class="dc-stat"><span class="dc-sv">&lt;1s</span><span class="dc-sl">Response</span></div>
-        <div class="dc-stat"><span class="dc-sv">100%</span><span class="dc-sl">Answered</span></div>
-      </div>
+      <a href="tel:+6478085066" class="hero-orbit-demo"><span>🇳🇿</span><span><small>Live AI Demo Line</small><strong>+64 7 808 5066</strong></span><span>📞</span></a>
     </div>
   </div>
   </div>
