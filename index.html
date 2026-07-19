@@ -450,6 +450,28 @@ img{display:block;max-width:100%;}
 .ac-text{font-size:14px;color:#475569;line-height:1.75;margin-bottom:14px;}
 .ac-text:last-child{margin-bottom:0;}
 
+/* ─── TERMS, PRIVACY & ADD-ONS ─── */
+.legal-sec{background:#f8fafc;padding:88px 0;}
+.legal-intro{max-width:760px;margin-bottom:36px;}
+.legal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.legal-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:27px;box-shadow:0 8px 24px rgba(15,23,42,.04);}
+.legal-card.wide{grid-column:1/-1;}
+.legal-card h3{font-size:18px;color:var(--ink);margin-bottom:11px;}
+.legal-card h4{font-size:14px;color:#1e3a8a;margin:20px 0 7px;}
+.legal-card p,.legal-card li{font-size:13px;color:#4b5563;line-height:1.7;}
+.legal-card ul{padding-left:19px;margin-top:10px;}
+.legal-note{margin-top:20px;font-size:12px;color:var(--sub);line-height:1.65;}
+.legal-contact{display:inline-flex;margin-top:15px;color:var(--blue);font-size:13px;font-weight:700;}
+.addons-sec{padding:88px 0;background:#fff;}
+.addons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px;}
+.addon-card{border:1px solid var(--border);border-radius:15px;padding:25px;background:var(--bg-soft);transition:transform .2s,box-shadow .2s;}
+.addon-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,23,42,.09);}
+.addon-icon{font-size:25px;margin-bottom:13px;}.addon-card h3{font-size:16px;color:var(--ink);margin-bottom:8px;}.addon-card p{font-size:13px;color:var(--sub);line-height:1.65;}.addon-cost{display:inline-block;margin-top:14px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#7c3aed;background:#f3e8ff;border-radius:999px;padding:6px 9px;}
+
+/* ─── COOKIE BANNER ─── */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9998;background:#111827;color:#fff;padding:18px 28px;box-shadow:0 -12px 36px rgba(15,23,42,.22);transform:translateY(110%);transition:transform .35s ease;}
+.cookie-banner.show{transform:translateY(0);}.cookie-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;}.cookie-copy{max-width:750px;}.cookie-copy strong{display:block;font-size:14px;margin-bottom:4px;}.cookie-copy p{font-size:12px;line-height:1.55;color:#cbd5e1;}.cookie-copy a{color:#67e8f9;text-decoration:underline;}.cookie-actions{display:flex;align-items:center;gap:9px;flex-shrink:0;}.cookie-btn{appearance:none;border:1px solid #64748b;border-radius:8px;background:transparent;color:#fff;padding:10px 14px;font:700 12px 'Inter',sans-serif;cursor:pointer;}.cookie-btn.primary{background:#2563eb;border-color:#2563eb;}.cookie-btn:hover{filter:brightness(1.08);}
+
 /* ─── CONTACT ─── */
 .contact-sec{background:#fff;padding:88px 0;}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px;}
@@ -479,28 +501,20 @@ img{display:block;max-width:100%;}
 }
 .btn-white:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,0.18);}
 
-/* ─── FOLLOW US ─── */
-.follow-sec{background:var(--ink);padding:48px 0 0;text-align:center;}
-.follow-title{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;}
-.follow-sub{font-size:13.5px;color:rgba(255,255,255,0.45);margin-bottom:22px;}
-.follow-icons{display:flex;align-items:center;justify-content:center;gap:12px;}
+/* ─── SITE FOOTER ─── */
+.site-footer{background:#0f172a;border-top:5px solid #fbbf24;color:#fff;}
+.site-footer-inner{max-width:1180px;margin:0 auto;padding:62px 28px 46px;display:grid;grid-template-columns:1.45fr 1fr 1fr 1fr;gap:48px;}
+.footer-brand .logo{margin-bottom:18px;}.footer-brand .logo-name{color:#fff;letter-spacing:1.5px;}.footer-brand .logo-tagline{font-size:9px;}.footer-blurb{max-width:260px;font-size:14px;line-height:1.65;color:#94a3b8;margin-bottom:24px;}
+.footer-heading{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#fbbf24;margin:8px 0 19px;}.footer-links{list-style:none;display:flex;flex-direction:column;gap:12px;}.footer-links a{font-size:14px;color:#94a3b8;transition:color .18s;}.footer-links a:hover{color:#fff;}
+.follow-icons{display:flex;align-items:center;gap:12px;}
 .follow-ico{
   width:42px;height:42px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.07);
-  border:1px solid rgba(255,255,255,0.1);
+  color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1);
   transition:all 0.2s;
 }
-.follow-ico:hover{color:#fff;background:var(--grad);border-color:transparent;transform:translateY(-3px);}
-
-/* ─── FOOTER ─── */
-.footer{
-  background:var(--ink);padding:28px;
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
-}
-.ft-l{font-size:12px;color:rgba(255,255,255,0.4);}
-.ft-l a{color:#06b6d4;}
-.ft-tag{font-size:10.5px;font-weight:700;letter-spacing:2px;background:linear-gradient(90deg,#dfff00,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.follow-ico[aria-label="Facebook"]{background:#1877f2;}.follow-ico[aria-label="LinkedIn"]{background:#0a66c2;}.follow-ico[aria-label="X (Twitter)"]{background:#111;}.follow-ico[aria-label="Instagram"]{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);}.follow-ico:hover{color:#fff;filter:brightness(1.12);transform:translateY(-3px);}
+.footer-bottom{border-top:1px solid rgba(148,163,184,.18);max-width:1180px;margin:0 auto;padding:20px 28px 26px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}.ft-l{font-size:12px;color:#94a3b8;}.ft-l a{color:#67e8f9;}.ft-tag{font-size:10.5px;font-weight:700;letter-spacing:2px;color:#fbbf24;}
 
 /* ─── MODAL ─── */
 .modal{
@@ -645,6 +659,11 @@ img{display:block;max-width:100%;}
   .contact-grid{grid-template-columns:1fr;}
   .cc-callout{grid-column:auto;}
   .about-grid{grid-template-columns:1fr;}
+  .legal-grid,.addons-grid{grid-template-columns:1fr;}
+  .legal-card.wide{grid-column:auto;}
+  .site-footer-inner{grid-template-columns:1fr 1fr;gap:28px;}
+  .footer-brand{grid-column:1/-1;}
+  .cookie-banner{padding:16px 20px;}.cookie-inner{align-items:flex-start;flex-direction:column;gap:14px;}.cookie-actions{width:100%;}.cookie-btn{flex:1;text-align:center;}
   .flow-row{flex-wrap:wrap;justify-content:center;gap:10px;}
   .fc{display:none;}
   .fc-down-wrap{display:none;}
@@ -660,6 +679,8 @@ img{display:block;max-width:100%;}
   .offer-price{font-size:64px;}
 }
 @media(max-width:600px){
+  .site-footer-inner{grid-template-columns:1fr;padding:44px 22px 32px;gap:26px;}
+  .footer-brand{grid-column:auto;}.footer-bottom{padding:18px 22px 24px;flex-direction:column;text-align:center;}
   .logo-badge{width:38px;height:38px;border-radius:11px;font-size:14px;}
   .logo-name{font-size:13px;letter-spacing:1.4px;}
   .logo-tagline{font-size:8px;letter-spacing:1.1px;}
@@ -758,9 +779,10 @@ img{display:block;max-width:100%;}
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#terms">Terms &amp; Conditions</a></li>
+      <li><a href="#about">About</a></li>
       <li class="social-links">
         <a href="https://www.facebook.com/profile.php?id=61591307150668" target="_blank" rel="noopener" class="social-ico fb" aria-label="Facebook">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.91h-2.33V22c4.78-.78 8.44-4.94 8.44-9.94"/></svg>
@@ -784,9 +806,10 @@ img{display:block;max-width:100%;}
   <div class="mob-nav" id="kw-mob">
     <a href="#home" onclick="kwHam()">Home</a>
     <a href="#services" onclick="kwHam()">Services</a>
-    <a href="#about" onclick="kwHam()">About</a>
     <a href="#how" onclick="kwHam()">How It Works</a>
     <a href="#contact" onclick="kwHam()">Contact</a>
+    <a href="#terms" onclick="kwHam()">Terms &amp; Conditions</a>
+    <a href="#about" onclick="kwHam()">About</a>
     <div class="mob-social">
       <a href="https://www.facebook.com/profile.php?id=61591307150668" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.91h-2.33V22c4.78-.78 8.44-4.94 8.44-9.94"/></svg></a>
       <a href="https://www.linkedin.com/company/kiwitechitsolutions" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
@@ -1065,34 +1088,6 @@ img{display:block;max-width:100%;}
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about-sec" id="about">
-  <div class="wrap">
-    <div class="about-eyebrow">
-      <span class="ae-line"></span>
-      <span class="ae-text">About KiwiTech IT Solutions</span>
-      <span class="ae-line"></span>
-    </div>
-    <h2 class="about-h">We Help Kiwi Businesses<br><span class="about-grad">Run on Autopilot</span></h2>
-    <p class="about-sub">KiwiTech IT Solutions is a Hamilton-based AI Automation Agency. We design, build, and manage intelligent systems that answer calls, capture leads, book appointments, and handle operations , so you can focus on your business.</p>
-
-    <div class="about-grid">
-      <div class="about-card">
-        <div class="ac-icon">🎯</div>
-        <div class="ac-title">Our Mission</div>
-        <p class="ac-text">To empower New Zealand businesses with practical, affordable AI automation that never misses a customer opportunity, handles repetitive work automatically, and helps businesses grow without adding headcount.</p>
-        <p class="ac-text">Every business , regardless of size , deserves access to the kind of intelligent automation that used to only be available to large corporations.</p>
-      </div>
-      <div class="about-card">
-        <div class="ac-icon">🔭</div>
-        <div class="ac-title">Our Vision</div>
-        <p class="ac-text">To become the leading AI Automation and Business Growth Partner in New Zealand , providing intelligent, connected business ecosystems that allow our clients to communicate better, sell faster, and scale efficiently.</p>
-        <p class="ac-text">We're building for the long term: helping businesses today build the systems that will carry them into tomorrow.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section class="contact-sec" id="contact">
   <div class="wrap">
@@ -1135,11 +1130,91 @@ img{display:block;max-width:100%;}
   </div>
 </section>
 
-<!-- FOLLOW US -->
-<section class="follow-sec">
-  <div class="follow-title">Follow KiwiTech IT Solutions</div>
-  <p class="follow-sub">Like, follow, and subscribe for AI automation tips and updates</p>
-  <div class="follow-icons">
+<!-- ADDITIONAL SERVICES -->
+<section class="addons-sec" id="add-ons">
+  <div class="wrap">
+    <span class="section-label">Beyond AI Reception</span>
+    <h2 class="section-h">Additional services, tailored to your business.</h2>
+    <p class="section-sub">The AI Receptionist is our core service. The options below are separate add-ons available at an additional cost; scope and pricing are confirmed in writing before work begins.</p>
+    <div class="addons-grid">
+      <article class="addon-card"><div class="addon-icon">🗣️</div><h3>AI Voice Agent Configuration</h3><p>Custom voice, greeting, frequently asked questions, call flows and escalation language designed around your brand and operations.</p><span class="addon-cost">Optional add-on - quoted separately</span></article>
+      <article class="addon-card"><div class="addon-icon">📅</div><h3>Booking &amp; Calendar Integration</h3><p>Connect appointment requests and availability workflows to your preferred calendar or booking process, with reminders where required.</p><span class="addon-cost">Optional add-on - quoted separately</span></article>
+      <article class="addon-card"><div class="addon-icon">🎯</div><h3>Lead Capture &amp; Routing</h3><p>Build structured lead questions and automated routing so enquiries reach the right person with the information needed to follow up.</p><span class="addon-cost">Optional add-on - quoted separately</span></article>
+      <article class="addon-card"><div class="addon-icon">⚙️</div><h3>Workflow Automation</h3><p>Connect routine tasks between your systems to reduce manual administration after calls, forms, bookings and customer enquiries.</p><span class="addon-cost">Optional add-on - quoted separately</span></article>
+      <article class="addon-card"><div class="addon-icon">🌐</div><h3>Website Development</h3><p>Conversion-focused websites with clear contact pathways, lead capture and optional AI or booking integrations.</p><span class="addon-cost">Optional add-on - quoted separately</span></article>
+      <article class="addon-card"><div class="addon-icon">🔧</div><h3>Ongoing Changes &amp; Support</h3><p>Post-launch script changes, configuration updates and new requests can be managed as a separately priced service request.</p><span class="addon-cost">Optional add-on - quoted separately</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS, PRIVACY & COOKIE POLICY -->
+<section class="legal-sec" id="terms">
+  <div class="wrap">
+    <div class="legal-intro">
+      <span class="section-label">Terms &amp; Conditions</span>
+      <h2 class="section-h">Clear terms for a dependable service.</h2>
+      <p class="section-sub">Last updated: 20 July 2026. These terms apply to the business engaging KiwiTech IT Solutions for its AI receptionist and related services.</p>
+    </div>
+    <div class="legal-grid">
+      <article class="legal-card wide">
+        <h3>Terms of Service</h3>
+        <p>By engaging, subscribing to, or using our service, the client agrees to these Terms. Our AI receptionist answers incoming calls, collects enquiry information, and relays details to the client. It is a call-handling and information-relay tool, not a substitute for the client’s professional judgement, advice or decision-making.</p>
+        <h4>Availability, accuracy and client responsibilities</h4>
+        <p>The service is supplied on an “as is” and “as available” basis and may depend on third-party telephony, voice AI, transcription and automation providers. The client must independently review and confirm all enquiries, caller details and booking requests before acting. A booking or meeting request is not confirmed until the client confirms it directly.</p>
+        <h4>AI limitations</h4>
+        <p>The assistant does not provide financial, legal, medical or other professional advice; collect payment or banking details; process payments; verify identity; or make final decisions. Callers describing an emergency are directed to contact emergency services. The client remains responsible for its industry-specific disclosures, licensing and legal obligations.</p>
+        <h4>Fees, changes and termination</h4>
+        <p>Fees are set out in the applicable quote or service agreement and are payable by the date stated on the invoice. We may suspend service for non-payment. Changes after go-live, including scripts, notification details, numbers, integrations or configuration, may be charged separately. Either party may end the service under the notice period in the applicable agreement; accrued fees remain payable.</p>
+        <h4>Liability, intellectual property and law</h4>
+        <p>To the maximum extent permitted by law, KiwiTech IT Solutions excludes liability for indirect, incidental, special or consequential loss, including loss of profits, business, data or reputation. Our aggregate liability for a claim relating to the service is limited to the fees paid by the client in the month immediately before the event giving rise to the claim. Nothing in these Terms limits rights that cannot lawfully be excluded, including under the Consumer Guarantees Act 1993 or Fair Trading Act 1986. Service configurations, prompts, workflows and automation logic remain KiwiTech IT Solutions’ intellectual property; clients receive a limited, non-transferable licence to use the service for their own business while engaged with us. These Terms are governed by New Zealand law and disputes are subject to New Zealand courts.</p>
+      </article>
+      <article class="legal-card">
+        <h3>Privacy notice</h3>
+        <p>We handle personal information in accordance with the New Zealand Privacy Act 2020 and its Information Privacy Principles. This notice applies to website visitors, callers using an AI receptionist for one of our clients, and our clients.</p>
+        <h4>What we may collect</h4>
+        <p>Name, phone number, email address, enquiry and appointment preferences, and a generated call summary or transcript. Call audio is not recorded. We do not request payment-card, banking or government-ID details through the assistant.</p>
+        <h4>Why and how we use it</h4>
+        <p>Information is collected to respond to an enquiry, send it to the relevant client, support requested services and maintain the service. We do not sell or rent personal information for marketing. Some providers may process information outside New Zealand; reasonable steps are taken to ensure appropriate safeguards.</p>
+        <h4>Your choices and rights</h4>
+        <p>You may ask to access or correct personal information we hold about you. Contact our Privacy Officer at the email below. If a concern is not resolved, you may contact the Office of the Privacy Commissioner.</p>
+      </article>
+      <article class="legal-card">
+        <h3>Cookie policy</h3>
+        <p>Cookies are small text files stored on your device. This site may use Google Analytics cookies to understand pages visited, time on site, general browser/device information and approximate location derived from IP address.</p>
+        <h4>Cookie choices</h4>
+        <p>Analytics cookies are optional. When this notice appears, you can accept analytics cookies or continue with essential site functionality only. You can also block or delete cookies in your browser settings, or use Google’s Analytics opt-out browser add-on.</p>
+        <h4>No advertising tracking</h4>
+        <p>We do not use cookies for advertising, ad retargeting or selling personal information for marketing. Google Analytics is provided by Google LLC and information may be processed outside New Zealand.</p>
+        <a class="legal-contact" href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out →</a>
+      </article>
+    </div>
+    <p class="legal-note">For privacy, cookie or Terms questions, contact KiwiTech IT Solutions at <a href="mailto:info@kiwitechitsolutions.com">info@kiwitechitsolutions.com</a>. These website terms are a public summary of the supplied client handbook; the applicable signed quote or service agreement takes priority where it differs.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-sec" id="about">
+  <div class="wrap">
+    <div class="about-eyebrow"><span class="ae-line"></span><span class="ae-text">About KiwiTech IT Solutions</span><span class="ae-line"></span></div>
+    <h2 class="about-h">We Help Kiwi Businesses<br><span class="about-grad">Run on Autopilot</span></h2>
+    <p class="about-sub">KiwiTech IT Solutions is a Hamilton-based AI Automation Agency. We design, build, and manage intelligent systems that answer calls, capture leads, book appointments, and handle operations , so you can focus on your business.</p>
+    <div class="about-grid">
+      <div class="about-card"><div class="ac-icon">🎯</div><div class="ac-title">Our Mission</div><p class="ac-text">To empower New Zealand businesses with practical, affordable AI automation that never misses a customer opportunity, handles repetitive work automatically, and helps businesses grow without adding headcount.</p><p class="ac-text">Every business , regardless of size , deserves access to the kind of intelligent automation that used to only be available to large corporations.</p></div>
+      <div class="about-card"><div class="ac-icon">🔭</div><div class="ac-title">Our Vision</div><p class="ac-text">To become the leading AI Automation and Business Growth Partner in New Zealand , providing intelligent, connected business ecosystems that allow our clients to communicate better, sell faster, and scale efficiently.</p><p class="ac-text">We're building for the long term: helping businesses today build the systems that will carry them into tomorrow.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="logo">
+        <div class="logo-badge">KT</div>
+        <div><div class="logo-name">KiwiTech IT Solutions</div><div class="logo-tagline">Automate · Innovate · Elevate</div></div>
+      </a>
+      <p class="footer-blurb">Practical AI automation that helps New Zealand businesses answer calls, capture leads and keep work moving.</p>
+      <div class="follow-icons" aria-label="Follow KiwiTech IT Solutions">
     <a href="https://www.facebook.com/profile.php?id=61591307150668" target="_blank" rel="noopener" class="follow-ico" aria-label="Facebook">
       <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.91h-2.33V22c4.78-.78 8.44-4.94 8.44-9.94"/></svg>
     </a>
@@ -1152,13 +1227,25 @@ img{display:block;max-width:100%;}
     <a href="https://www.instagram.com/kiwitechitsolutions/" target="_blank" rel="noopener" class="follow-ico" aria-label="Instagram">
       <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43-.26.66-.6 1.21-1.15 1.76-.55.55-1.1.9-1.76 1.15-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47-.66-.26-1.21-.6-1.76-1.15-.55-.55-.9-1.1-1.15-1.76-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76.55-.55 1.1-.9 1.76-1.15.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.21-1.85.34-.46.18-.79.4-1.14.74-.34.35-.56.68-.74 1.14-.13.35-.3.88-.34 1.85C3.84 9.13 3.83 9.45 3.83 12s.01 2.87.06 3.92c.04.97.21 1.5.34 1.85.18.46.4.79.74 1.14.35.34.68.56 1.14.74.35.13.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.21 1.85-.34.46-.18.79-.4 1.14-.74.34-.35.56-.68.74-1.14.13-.35.3-.88.34-1.85.05-1.05.06-1.37.06-3.92s-.01-2.87-.06-3.92c-.04-.97-.21-1.5-.34-1.85-.18-.46-.4-.79-.74-1.14-.35-.34-.68-.56-1.14-.74-.35-.13-.88-.3-1.85-.34C14.99 3.81 14.67 3.8 12 3.8zm0 3.05a5.15 5.15 0 1 1 0 10.3 5.15 5.15 0 0 1 0-10.3zm0 1.8a3.35 3.35 0 1 0 0 6.7 3.35 3.35 0 0 0 0-6.7zm5.36-1.99a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
     </a>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer-heading">Services</h3>
+      <ul class="footer-links"><li><a href="#services">AI Receptionist</a></li><li><a href="#add-ons">AI Voice Agents</a></li><li><a href="#add-ons">Booking &amp; Automation</a></li><li><a href="#add-ons">Website Development</a></li></ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">KiwiTech</h3>
+      <ul class="footer-links"><li><a href="#about">About Us</a></li><li><a href="#how">How It Works</a></li><li><a href="#contact">Contact</a></li><li><a href="#contact">Book an AI Demo</a></li></ul>
+    </div>
+    <div>
+      <h3 class="footer-heading">Terms &amp; Policies</h3>
+      <ul class="footer-links"><li><a href="#terms">Terms &amp; Conditions</a></li><li><a href="#terms">Privacy Notice</a></li><li><a href="#terms">Cookie Policy</a></li><li><a href="mailto:info@kiwitechitsolutions.com">Privacy Enquiries</a></li></ul>
+    </div>
   </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <span class="ft-l">© 2025 KiwiTech IT Solutions · Hamilton, New Zealand · <a href="mailto:info@kiwitechitsolutions.com">info@kiwitechitsolutions.com</a></span>
-  <span class="ft-tag">AUTOMATE · INNOVATE · ELEVATE</span>
+  <div class="footer-bottom">
+    <span class="ft-l">© 2026 KiwiTech IT Solutions · Hamilton, New Zealand · <a href="mailto:info@kiwitechitsolutions.com">info@kiwitechitsolutions.com</a></span>
+    <span class="ft-tag">AUTOMATE · INNOVATE · ELEVATE</span>
+  </div>
 </footer>
 
 <!-- SERVICE DETAIL MODAL -->
@@ -1209,6 +1296,20 @@ img{display:block;max-width:100%;}
   </div>
 </div>
 
+<!-- COOKIE CONSENT -->
+<aside class="cookie-banner" id="kw-cookie-banner" role="dialog" aria-label="Cookie preferences" aria-live="polite">
+  <div class="cookie-inner">
+    <div class="cookie-copy">
+      <strong>Your cookie choices</strong>
+      <p>We use optional analytics cookies to understand how visitors use this site. You can accept analytics cookies or decline them and continue using essential site functionality. See our <a href="#terms">Cookie Policy</a>.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn" type="button" onclick="kwCookieChoice('essential')">Decline Cookies</button>
+      <button class="cookie-btn primary" type="button" onclick="kwCookieChoice('analytics')">Accept Cookies</button>
+    </div>
+  </div>
+</aside>
+
 <script>
 function kwOfferClose(){
   var offer=document.getElementById('kw-offer'),tab=document.getElementById('kw-offer-float');
@@ -1221,6 +1322,14 @@ function kwOfferOpen(){
   if(tab)tab.classList.remove('is-visible');
 }
 function kwHam(){var m=document.getElementById('kw-mob');if(m)m.classList.toggle('open');}
+function kwCookieChoice(choice){
+  try{localStorage.setItem('kw-cookie-choice',choice);}catch(e){}
+  var banner=document.getElementById('kw-cookie-banner');if(banner)banner.classList.remove('show');
+}
+function kwCookieInit(){
+  var choice=null;try{choice=localStorage.getItem('kw-cookie-choice');}catch(e){}
+  if(!choice){var banner=document.getElementById('kw-cookie-banner');if(banner)banner.classList.add('show');}
+}
 function kwModal(o){var m=document.getElementById('kw-modal');if(!m)return;if(o){m.classList.add('open');document.body.style.overflow='hidden';}else{m.classList.remove('open');document.body.style.overflow='';}}
 function kwScroll(d){var s=document.getElementById('kw-svc');if(s)s.scrollBy({left:d*300,behavior:'smooth'});}
 var kwServices=[
@@ -1307,6 +1416,7 @@ document.addEventListener('click',function(e){
   var mob=document.getElementById('kw-mob'),ham=document.getElementById('kw-ham');
   if(mob&&mob.classList.contains('open')&&!mob.contains(e.target)&&ham&&!ham.contains(e.target))mob.classList.remove('open');
 });
+kwCookieInit();
 </script>
 </body>
 </html>
